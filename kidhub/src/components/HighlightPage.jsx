@@ -1,9 +1,11 @@
-import { motion } from "motion/react";
+"use client";
+
+import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "@/components/HeroHighlight.jsx";
 
-export default function(){
-    return(
-      <HeroHighlight>
+export default function () {
+  return (
+    <HeroHighlight>
       <motion.h1
         initial={{
           opacity: 0,
@@ -17,12 +19,13 @@ export default function(){
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto ">
-        With insomnia, nothing&apos;s real. Everything is far away. Everything
-        is a{" "}
+        className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+      >
+        Crafted with Curiosity. Presented with Pride.{" "}
         <Highlight className="text-white">
-          copy, of a copy, of a copy.
+          Student-Powered. Web-Driven.
         </Highlight>
       </motion.h1>
-    </HeroHighlight>)
+    </HeroHighlight>
+  );
 }

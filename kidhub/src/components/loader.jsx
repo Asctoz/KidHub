@@ -1,5 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+"use client";
+
+import React from "react";
+import styled from "styled-components";
 
 const Loader = () => {
   return (
@@ -15,7 +17,7 @@ const Loader = () => {
       </div>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -67,7 +69,7 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 8px; /* Space between the two text lines */
-    color: #FFFFFF; /* White text for contrast against bg-gray-900 */
+    color: #ffffff; /* White text for contrast against bg-gray-900 */
     font-family: sans-serif;
     font-size: 18px; /* Equivalent to text-lg */
     font-weight: 400; /* Regular weight for clean look */
