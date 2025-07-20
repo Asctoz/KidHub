@@ -9,6 +9,7 @@ import { AnimatedPinCard, PinContainer } from "@/components/3dPin";
 import { ColourfulText } from "@/components/ColourfulText.jsx";
 import { DraggableCardDemo } from "@/components/DraggableCards";
 import { motion } from "motion/react";
+import { ThreeDMarqueeDemoSecond } from "@/components/3dmarquee.jsx";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -71,6 +72,7 @@ export default function Home() {
               </h1>
             </div>
             <DraggableCardDemo />
+            <ThreeDMarqueeDemoSecond />
           </>
         )
       )}

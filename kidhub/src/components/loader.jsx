@@ -13,7 +13,7 @@ const Loader = () => {
       </div>
       <div className="loader-text">
         <p>Loading Creator Webpage...</p>
-        <p>Made by: Dexibility</p>
+        <p>Made by Dexibility</p>
       </div>
     </StyledWrapper>
   );
