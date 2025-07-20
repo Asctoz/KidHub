@@ -6,6 +6,9 @@ import HighlightPage from "@/components/HighlightPage.jsx";
 import Loader from "@/components/Loader.jsx";
 // import Card from "@/components/Card.jsx";
 import { AnimatedPinCard, PinContainer } from "@/components/3dPin";
+import { ColourfulText } from "@/components/ColourfulText.jsx";
+import { DraggableCardDemo } from "@/components/DraggableCards";
+import { motion } from "motion/react";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -59,32 +62,15 @@ export default function Home() {
                   link="https://www.decram.me"
                   img="/assets/Decram.jpg"
                 />
-                <AnimatedPinCard
-                  title="DeCram AI"
-                  description="DeCram AI is an AI-powered student platform"
-                  link="https://www.decram.me"
-                  img="/assets/Decram.jpg"
-                />
-                <AnimatedPinCard
-                  title="DeCram AI"
-                  description="DeCram AI is an AI-powered student platform"
-                  link="https://www.decram.me"
-                  img="/assets/Decram.jpg"
-                />
-                <AnimatedPinCard
-                  title="DeCram AI"
-                  description="DeCram AI is an AI-powered student platform"
-                  link="https://www.decram.me"
-                  img="/assets/Decram.jpg"
-                />
-                <AnimatedPinCard
-                  title="DeCram AI"
-                  description="DeCram AI is an AI-powered student platform"
-                  link="https://www.decram.me"
-                  img="/assets/Decram.jpg"
-                />
               </div>
             </div>
+            <div className="w-full flex items-start justify-center pt-16 pb-8 relative overflow-hidden bg-black">
+              <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans">
+                Our resourceful
+                <ColourfulText text=" Contributors" /> <br />
+              </h1>
+            </div>
+            <DraggableCardDemo />
           </>
         )
       )}
