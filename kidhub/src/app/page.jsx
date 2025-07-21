@@ -36,10 +36,11 @@ export default function Home() {
       ) : (
         showContent && (
           <>
+          <ThreeDMarqueeDemoSecond />
             <Navbar />
-            <HighlightPage />
+            
             {/* <Card /> */}
-            <div className="min-h-screen px-4 py-8 bg-black text-white">
+            <div className="min-h-screen px-4 py-5 bg-black text-white">
               <h1 className="text-5xl font-bold mb-8 text-center">
                 Our Projects
               </h1>
@@ -65,14 +66,15 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="w-full flex items-start justify-center pt-16 pb-8 relative overflow-hidden bg-black">
+            <div className="w-full flex items-start justify-center pt-2 pb-10 relative overflow-hidden bg-black">
               <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans">
                 Our resourceful
                 <ColourfulText text=" Contributors" /> <br />
               </h1>
             </div>
+            
             <DraggableCardDemo />
-            <ThreeDMarqueeDemoSecond />
+            <HighlightPage />
           </>
         )
       )}

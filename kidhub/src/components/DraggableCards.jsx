@@ -181,32 +181,32 @@ export const DraggableCardContainer = ({ className, children }) => {
 export function DraggableCardDemo() {
   const items = [
     {
-      title: "James Hetfield",
+      title: "Abhay",
       image:
-        "https://guitar.com/wp-content/uploads/2024/03/James-Hetfield-Metallica-Tokyo-1986-credit-Koh-Hasebe-Shinko-Music-Getty@2000x1500.jpg",
+        "https://i.postimg.cc/L4WBpjKF/Screenshot-2025-07-21-205008.png",
       className: "absolute top-10 left-[20%] rotate-[-5deg]",
     },
     {
-      title: "Kirk Hammett",
+      title: "Aarnav",
       image:
-        "https://i.ytimg.com/vi/C6ujl-qqI54/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-BIAC4AOKAgwIABABGFYgSihyMA8=&rs=AOn4CLAHzy2GrCdvzwLxTmIKKdPeZgf9vA",
+        "https://i.postimg.cc/HnFQ914k/Screenshot-2025-07-21-205017.png",
       className: "absolute top-40 left-[25%] rotate-[-7deg]",
     },
     {
-      title: "Chester Bennington",
+      title: "Shaurya",
       image:
-        "https://www.rollingstone.com/wp-content/uploads/2018/06/chester-bennington-linkin-park-obit-a53cd0a0-c57a-484e-b0f6-e52173634d93.jpg?w=910&h=511&crop=1",
+        "https://i.postimg.cc/yYShYWsg/Screenshot-2025-07-21-205005.png",
       className: "absolute top-5 left-[40%] rotate-[8deg]",
     },
     {
-      title: "Corey Taylor",
+      title: "Amaan",
       image:
-        "https://cdnb.artstation.com/p/assets/images/images/028/141/023/large/dave-ijzelenberg-corey-vol-3-finished.jpg?1593602204",
+        "https://i.postimg.cc/2y1QWSWt/Screenshot-2025-07-21-204955.png",
       className: "absolute top-32 left-[55%] rotate-[10deg]",
     },
     {
-      title: "Dimebag Darrell",
-      image: "https://i.iheart.com/v3/re/new_assets/5dea703387e1975bb866be2a",
+      title: "Amaan2",
+      image: "https://i.postimg.cc/W1LGDj19/Screenshot-2025-07-21-205013.png",
       className: "absolute top-20 right-[35%] rotate-[2deg]",
     },
     {

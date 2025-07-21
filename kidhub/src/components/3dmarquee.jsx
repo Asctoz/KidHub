@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+
 export const ThreeDMarquee = ({ images, className }) => {
   // Split the images array into 4 equal parts
   const chunkSize = Math.ceil(images.length / 4);
@@ -9,20 +10,21 @@ export const ThreeDMarquee = ({ images, className }) => {
     const start = colIndex * chunkSize;
     return images.slice(start, start + chunkSize);
   });
+
   return (
     <div
       className={cn(
-        "mx-auto block h-[600px] overflow-hidden rounded-2xl max-sm:h-100",
+        "absolute inset-0 w-full h-full overflow-hidden rounded-none",
         className
       )}
     >
-      <div className="flex size-full items-center justify-center">
-        <div className="size-[1720px] shrink-0 scale-50 sm:scale-75 lg:scale-100">
+      <div className="flex w-full h-full items-center justify-center">
+        <div className="w-[90vw] h-[90vh] shrink-0 scale-[0.4] sm:scale-[0.6] md:scale-[0.8] lg:scale-[1]">
           <div
             style={{
               transform: "rotateX(55deg) rotateY(0deg) rotateZ(-45deg)",
             }}
-            className="relative top-96 right-[50%] grid size-full origin-top-left grid-cols-4 gap-8 transform-3d"
+            className="relative top-[50vh] right-[50%] grid w-full h-full origin-top-left grid-cols-4 gap-4 md:gap-8 transform-3d"
           >
             {chunks.map((subarray, colIndex) => (
               <motion.div
@@ -33,7 +35,7 @@ export const ThreeDMarquee = ({ images, className }) => {
                   repeatType: "reverse",
                 }}
                 key={colIndex + "marquee"}
-                className="flex flex-col items-start gap-8"
+                className="flex flex-col items-start gap-4 md:gap-8"
               >
                 <GridLineVertical className="-left-4" offset="80px" />
                 {subarray.map((image, imageIndex) => (
@@ -50,7 +52,7 @@ export const ThreeDMarquee = ({ images, className }) => {
                       key={imageIndex + image}
                       src={image}
                       alt={`Image ${imageIndex + 1}`}
-                      className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl"
+                      className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl w-full"
                       width={970}
                       height={700}
                     />
@@ -74,10 +76,7 @@ const GridLineHorizontal = ({ className, offset }) => {
         "--height": "1px",
         "--width": "5px",
         "--fade-stop": "90%",
-
-        //-100px if you want to keep the line inside
         "--offset": offset || "200px",
-
         "--color-dark": "rgba(255, 255, 255, 0.2)",
         maskComposite: "exclude",
       }}
@@ -104,10 +103,7 @@ const GridLineVertical = ({ className, offset }) => {
         "--height": "5px",
         "--width": "1px",
         "--fade-stop": "90%",
-
-        //-100px if you want to keep the line inside
         "--offset": offset || "150px",
-
         "--color-dark": "rgba(255, 255, 255, 0.2)",
         maskComposite: "exclude",
       }}
@@ -121,11 +117,9 @@ const GridLineVertical = ({ className, offset }) => {
         "dark:bg-[linear-gradient(to_bottom,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]",
         className
       )}
-
     ></div>
   );
 };
-
 
 export function ThreeDMarqueeDemoSecond() {
   const images = [
@@ -161,8 +155,9 @@ export function ThreeDMarqueeDemoSecond() {
     "https://assets.aceternity.com/wobble-card.png",
     "https://assets.aceternity.com/world-map.webp",
   ];
+
   return (
-    <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
+    <div className="relative w-screen h-screen min-h-screen flex flex-col items-center justify-center overflow-hidden rounded-none">
       <h2 className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl">
         Not just students. Young creators of the{" "}
         <span className="relative z-20 inline-block rounded-xl bg-blue-500/40 px-4 py-1 text-white underline decoration-sky-500 decoration-[6px] underline-offset-[16px] backdrop-blur-sm">
@@ -177,17 +172,16 @@ export function ThreeDMarqueeDemoSecond() {
         <button className="rounded-md bg-sky-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
           Explore Projects
         </button>
-        <button className="rounded-md border border-white/20 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
-          Read more
+        <button className="rounded-md border border-white/20 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/50 focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
+          Open random project
         </button>
       </div>
       {/* overlay */}
       <div className="absolute inset-0 z-10 h-full w-full bg-black/80 dark:bg-black/40" />
       <ThreeDMarquee
-        className="pointer-events-none absolute inset-0 h-full w-full"
+        className="pointer-events-none absolute inset-0 w-full h-full"
         images={images}
       />
     </div>
   );
 }
-

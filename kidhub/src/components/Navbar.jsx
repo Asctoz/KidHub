@@ -10,6 +10,9 @@ import {
 } from "@tabler/icons-react";
 
 export default function FloatingDockDemo() {
+  // Adjustable top offset in pixels
+  const topOffset = 50;
+
   const links = [
     {
       title: "Home",
@@ -18,7 +21,6 @@ export default function FloatingDockDemo() {
       ),
       href: "#",
     },
-
     {
       title: "Products",
       icon: (
@@ -40,7 +42,8 @@ export default function FloatingDockDemo() {
           src="https://assets.aceternity.com/logo-dark.png"
           width={20}
           height={20}
-          alt="Aceternity Logo" />
+          alt="Aceternity Logo"
+        />
       ),
       href: "#",
     },
@@ -51,7 +54,6 @@ export default function FloatingDockDemo() {
       ),
       href: "#",
     },
-
     {
       title: "Twitter",
       icon: (
@@ -67,11 +69,13 @@ export default function FloatingDockDemo() {
       href: "#",
     },
   ];
+
   return (
-    <div className="flex items-center justify-center h-[0.5rem] w-full z-10000 top-25 sticky">
-      <FloatingDock
-        mobileClassName="translate-y-20"
-        items={links} />
+    <div
+      className="flex items-center justify-center w-full fixed z-[10000]"
+      style={{ top: `${topOffset}px` }}
+    >
+      <FloatingDock mobileClassName="translate-y-20" items={links} />
     </div>
   );
 }

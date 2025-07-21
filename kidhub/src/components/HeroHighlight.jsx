@@ -8,6 +8,9 @@ export const HeroHighlight = ({
   className,
   containerClassName
 }) => {
+  // Adjustable height in viewport height (vh) units
+  const heightVh = 10;
+
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
@@ -38,9 +41,10 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "group relative flex min-h-screen w-full items-center justify-center bg-white dark:bg-black px-4 py-8",
+        "group relative flex w-full items-center justify-center bg-white dark:bg-black px-4 py-8",
         containerClassName
       )}
+      style={{ height: `${heightVh}vh` }}
       onMouseMove={handleMouseMove}
     >
       <div
