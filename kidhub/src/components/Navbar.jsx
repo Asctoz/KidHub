@@ -22,21 +22,14 @@ export default function FloatingDockDemo() {
       href: "#",
     },
     {
-      title: "Products",
+      title: "Websites",
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
-    {
-      title: "Components",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Aceternity UI",
+        {
+      title: "Random Website!",
       icon: (
         <img
           src="https://assets.aceternity.com/logo-dark.png"
@@ -48,23 +41,16 @@ export default function FloatingDockDemo() {
       href: "#",
     },
     {
-      title: "Changelog",
+      title: "Contributors",
+      icon: (
+        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Credits",
       icon: (
         <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "GitHub",
-      icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
