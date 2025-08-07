@@ -209,18 +209,6 @@ export function DraggableCardDemo() {
       image: "https://i.postimg.cc/W1LGDj19/Screenshot-2025-07-21-205013.png",
       className: "absolute top-20 right-[35%] rotate-[2deg]",
     },
-    {
-      title: "P. Diddy",
-      image:
-        "https://i.abcnewsfe.com/a/d2fbba79-7be4-43fe-9a3a-321df1b3fcc9/diddy-3-ap-gmh-250708_1751980139317_hpMain_16x9.jpg?w=992",
-      className: "absolute top-24 left-[45%] rotate-[-7deg]",
-    },
-    {
-      title: "Dave Mustaine",
-      image:
-        "https://www.vice.com/wp-content/uploads/sites/2/2012/08/f5bdc0c18baf13039ee76755d9678103.jpg?w=600",
-      className: "absolute top-8 left-[30%] rotate-[4deg]",
-    },
   ];
   return (
     <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
