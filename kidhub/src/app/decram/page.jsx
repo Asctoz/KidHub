@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { CodeBlock } from '@/components/CodeBlock';
+import Navbar from "@/components/Navbar.jsx";
 
 export default function Home() {
     const [tab, setTab] = useState('preview');
@@ -26,14 +27,21 @@ export default function Home() {
     </div>
   );
 };
-`
+`;
 
     return (
-        <main className="min-h-screen bg-black text-white px-4 py-10 flex flex-col items-center">
+        <>
+        <Navbar />
+        <main className="min-h-screen bg-black text-white px-4 py-5 flex flex-col items-center mt-20">
             <h1 className="text-4xl font-bold mb-4">🎓 Student Website Showcase</h1>
             <p className="text-gray-400 mb-8">View student projects in real-time.</p>
-
-            <div className="w-full max-w-4xl bg-gray-900 border border-gray-700 rounded-xl overflow-hidden shadow-xl">
+            <div 
+                className="w-full max-w-6xl bg-gray-900 border border-gray-700 rounded-xl overflow-hidden shadow-2xl relative" 
+                style={{ boxShadow: '0 0 20px 5px rgba(255, 255, 255, 0.34), 0 0 40px 10px rgba(255, 255, 255, 0.57)' }}
+            >
+                {/* Purplish glow effect */}
+                <div className="absolute inset-0 -z-10 bg-gradient-radial from-purple-500 via-transparent to-transparent blur-2xl opacity-70 animate-pulse"></div>
+                
                 {/* Tabs */}
                 <div className="flex">
                     <button
@@ -41,7 +49,7 @@ export default function Home() {
                         className={`w-1/2 py-3 text-sm font-medium border-b-2 transition ${tab === 'preview'
                             ? 'border-white bg-gray-800'
                             : 'border-transparent hover:bg-gray-800'
-                            }`}
+                        }`}
                     >
                         Preview
                     </button>
@@ -50,14 +58,14 @@ export default function Home() {
                         className={`w-1/2 py-3 text-sm font-medium border-b-2 transition ${tab === 'code'
                             ? 'border-white bg-gray-800'
                             : 'border-transparent hover:bg-gray-800'
-                            }`}
+                        }`}
                     >
                         Code
                     </button>
                 </div>
 
                 {/* Content */}
-                <div className="aspect-video bg-black">
+                <div className="aspect-video bg-black flex flex-col">
                     {tab === 'preview' ? (
                         <iframe
                             src={iframeUrl}
@@ -66,14 +74,14 @@ export default function Home() {
                             title="Student Website"
                         />
                     ) : (
-                        <pre className="p-4 text-green-300 text-sm font-mono whitespace-pre-wrap">
+                        <div className="flex-1 overflow-auto">
                             <CodeBlock
                                 language="jsx"
                                 filename="DummyComponent.jsx"
                                 highlightLines={[9, 13, 14, 18]}
                                 code={code}
                             />
-                        </pre>
+                        </div>
                     )}
                 </div>
 
@@ -90,5 +98,6 @@ export default function Home() {
                 </div>
             </div>
         </main>
+        </>
     );
 }
