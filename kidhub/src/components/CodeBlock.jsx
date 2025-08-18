@@ -1,7 +1,11 @@
 "use client";
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import {
+  coldarkCold,
+  Mercury,
+  materialDark,
+} from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IconCheck, IconCopy } from "@tabler/icons-react";
 
 export const CodeBlock = ({
@@ -9,7 +13,7 @@ export const CodeBlock = ({
   filename,
   code,
   highlightLines = [],
-  tabs = []
+  tabs = [],
 }) => {
   const [copied, setCopied] = React.useState(false);
   const [activeTab, setActiveTab] = React.useState(0);
@@ -46,7 +50,8 @@ export const CodeBlock = ({
                   activeTab === index
                     ? "text-white"
                     : "text-zinc-400 hover:text-zinc-200"
-                }`}>
+                }`}
+              >
                 {tab.name}
               </button>
             ))}
@@ -57,7 +62,8 @@ export const CodeBlock = ({
             <div className="text-xs text-zinc-400">{filename}</div>
             <button
               onClick={copyToClipboard}
-              className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200 transition-colors font-sans">
+              className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200 transition-colors font-sans"
+            >
               {copied ? <IconCheck size={14} /> : <IconCopy size={14} />}
             </button>
           </div>
@@ -67,7 +73,7 @@ export const CodeBlock = ({
       <div className="flex-1 overflow-auto">
         <SyntaxHighlighter
           language={activeLanguage}
-          style={atomDark}
+          style={materialDark}
           customStyle={{
             margin: 0,
             padding: 0,

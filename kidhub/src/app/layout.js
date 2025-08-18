@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 // Configure Roboto font
 const roboto = Roboto({
@@ -18,13 +19,15 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "KidHub",
-  description: "Kidhub is a website for Doon International School kids to display their work in a single webpage.",
+  description:
+    "Kidhub is a website for Doon International School kids to display their work in a single webpage.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${roboto.variable} ${geistMono.variable} antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>
