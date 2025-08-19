@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import { FloatingDock } from "@/components/Floating-dock";
 import {
   IconBrandGithub,
@@ -13,6 +15,31 @@ export default function FloatingDockDemo() {
   // Adjustable top offset in pixels
   const topOffset = 50;
 
+  useEffect(() => {
+    const handleClick = (e) => {
+      const href = e.target.closest("a")?.getAttribute("href");
+      if (href?.startsWith("#")) {
+        e.preventDefault();
+        const section = document.querySelector(href);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+
+    // Attach click listener to all links in the FloatingDock
+    document.querySelectorAll(".floating-dock a").forEach((link) => {
+      link.addEventListener("click", handleClick);
+    });
+
+    // Cleanup event listeners on unmount
+    return () => {
+      document.querySelectorAll(".floating-dock a").forEach((link) => {
+        link.removeEventListener("click", handleClick);
+      });
+    };
+  }, []);
+
   const links = [
     {
       title: "Home",
@@ -26,9 +53,9 @@ export default function FloatingDockDemo() {
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#Websites",
     },
-        {
+    {
       title: "Random Website!",
       icon: (
         <img
@@ -45,14 +72,14 @@ export default function FloatingDockDemo() {
       icon: (
         <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#Contributors",
     },
     {
       title: "Credits",
       icon: (
         <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#Footer",
     },
   ];
 

@@ -4,11 +4,9 @@ import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar.jsx";
 import HighlightPage from "@/components/HighlightPage.jsx";
 import Loader from "@/components/Loader.jsx";
-// import Card from "@/components/Card.jsx";
-import { AnimatedPinCard, PinContainer } from "@/components/3dPin";
+import { AnimatedPinCard } from "@/components/3dPin";
 import { ColourfulText } from "@/components/ColourfulText.jsx";
 import { DraggableCardDemo } from "@/components/DraggableCards";
-import { motion } from "motion/react";
 import { ThreeDMarqueeDemoSecond } from "@/components/3dmarquee.jsx";
 
 export default function Home() {
@@ -36,13 +34,11 @@ export default function Home() {
       ) : (
         showContent && (
           <>
-          <ThreeDMarqueeDemoSecond />
+            <ThreeDMarqueeDemoSecond />
             <Navbar />
-            
-            {/* <Card /> */}
-            <div className="min-h-screen px-4 py-5 bg-black text-white">
+            <div id="Websites" className="min-h-screen px-4 py-5 bg-black text-white">
               <h1 className="text-5xl font-bold mb-8 text-center">
-                Our Projects
+                <a href="#Websites">Our Projects</a>
               </h1>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 justify-items-center">
@@ -67,15 +63,17 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="w-full flex items-start justify-center pt-2 pb-10 relative overflow-hidden bg-black">
+            <div id="Contributors" className="w-full flex items-start justify-center pt-2 pb-10 relative overflow-hidden bg-black">
               <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans">
                 Our resourceful
                 <ColourfulText text=" Contributors" /> <br />
               </h1>
             </div>
-            
             <DraggableCardDemo />
             <HighlightPage />
+            <footer id="Footer" className="bg-black text-white py-8 text-center">
+              <p>Developed with ❤️ by Dexibility Productions</p>
+            </footer>
           </>
         )
       )}

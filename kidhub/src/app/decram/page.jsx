@@ -135,7 +135,7 @@ export default function Home() {
           {/* Footer */}
           <div className="p-4 flex justify-between items-center bg-[#121212] border-t border-gray-800">
             <span className="text-sm text-gray-400">
-              by <strong className="text-white">Student Name</strong>
+              by <strong className="text-white">Dexibility Productions</strong>
             </span>
             <a
               href={iframeUrl}
