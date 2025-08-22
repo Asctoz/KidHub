@@ -182,31 +182,27 @@ export function DraggableCardDemo() {
   const items = [
     {
       title: "Abhay",
-      image:
-        "https://i.postimg.cc/L4WBpjKF/Screenshot-2025-07-21-205008.png",
+      image: "../../public/bacche/abue.jpg",
       className: "absolute top-10 left-[20%] rotate-[-5deg]",
     },
     {
-      title: "Aarnav",
-      image:
-        "https://i.postimg.cc/HnFQ914k/Screenshot-2025-07-21-205017.png",
+      title: "Shaurya",
+      image: "../../public/bacche/shawarma.jpg",
       className: "absolute top-40 left-[25%] rotate-[-7deg]",
     },
     {
-      title: "Shaurya",
-      image:
-        "https://i.postimg.cc/yYShYWsg/Screenshot-2025-07-21-205005.png",
+      title: "Amaan",
+      image: "../../public/bacche/anaam.jpg",
       className: "absolute top-5 left-[40%] rotate-[8deg]",
     },
     {
-      title: "Amaan",
-      image:
-        "https://i.postimg.cc/2y1QWSWt/Screenshot-2025-07-21-204955.png",
+      title: "Gurshan",
+      image: "../../public/bacche/gurshan.jpg",
       className: "absolute top-32 left-[55%] rotate-[10deg]",
     },
     {
-      title: "Amaan2",
-      image: "https://i.postimg.cc/W1LGDj19/Screenshot-2025-07-21-205013.png",
+      title: "Maninder",
+      image: "../../public/bacche/maninder.jpg",
       className: "absolute top-20 right-[35%] rotate-[2deg]",
     },
   ];
