@@ -179,32 +179,32 @@ export const DraggableCardContainer = ({ className, children }) => {
 };
 
 export function DraggableCardDemo() {
-  const items = [
-    {
-      title: "Abhay",
-      image: "../../public/bacche/abue.jpg",
-      className: "absolute top-10 left-[20%] rotate-[-5deg]",
-    },
-    {
-      title: "Shaurya",
-      image: "../../public/bacche/shawarma.jpg",
-      className: "absolute top-40 left-[25%] rotate-[-7deg]",
-    },
-    {
-      title: "Amaan",
-      image: "../../public/bacche/anaam.jpg",
-      className: "absolute top-5 left-[40%] rotate-[8deg]",
-    },
-    {
-      title: "Gurshan",
-      image: "../../public/bacche/gurshan.jpg",
-      className: "absolute top-32 left-[55%] rotate-[10deg]",
-    },
-    {
-      title: "Maninder",
-      image: "../../public/bacche/maninder.jpg",
-      className: "absolute top-20 right-[35%] rotate-[2deg]",
-    },
+const items = [
+  {
+    title: "Abhay",
+    image: "/bacche/abue.jpg", // Updated path
+    className: "absolute top-10 left-[20%] rotate-[-5deg]",
+  },
+  {
+    title: "Shaurya",
+    image: "/bacche/shawarma.jpg", // Updated path
+    className: "absolute top-40 left-[25%] rotate-[-7deg]",
+  },
+  {
+    title: "Amaan",
+    image: "/bacche/anaam.jpg", // Updated path
+    className: "absolute top-5 left-[40%] rotate-[8deg]",
+  },
+  {
+    title: "Gurshan",
+    image: "/bacche/gurshan.jpg", // Updated path
+    className: "absolute top-32 left-[55%] rotate-[10deg]",
+  },
+  {
+    title: "Maninder",
+    image: "/bacche/maninder.jpg", // Updated path
+    className: "absolute top-20 right-[35%] rotate-[2deg]",
+  },
   ];
   return (
     <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
