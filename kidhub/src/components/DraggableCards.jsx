@@ -179,33 +179,79 @@ export const DraggableCardContainer = ({ className, children }) => {
 };
 
 export function DraggableCardDemo() {
-const items = [
-  {
-    title: "Abhay",
-    image: "/bacche/abue.jpg", // Updated path
-    className: "absolute top-10 left-[20%] rotate-[-5deg]",
-  },
-  {
-    title: "Shaurya",
-    image: "/bacche/shawarma.jpg", // Updated path
-    className: "absolute top-40 left-[25%] rotate-[-7deg]",
-  },
-  {
-    title: "Amaan",
-    image: "/bacche/anaam.jpg", // Updated path
-    className: "absolute top-5 left-[40%] rotate-[8deg]",
-  },
-  {
-    title: "Gurshan",
-    image: "/bacche/gurshan.jpg", // Updated path
-    className: "absolute top-32 left-[55%] rotate-[10deg]",
-  },
-  {
-    title: "Maninder",
-    image: "/bacche/maninder.jpg", // Updated path
-    className: "absolute top-20 right-[35%] rotate-[2deg]",
-  },
+  const items = [
+    {
+      title: "Abhay",
+      image: "/bacche/abue.jpg",
+      className: "absolute top-10 left-[15%] rotate-[-5deg]",
+    },
+    {
+      title: "Shaurya",
+      image: "/bacche/shawarma.jpg",
+      className: "absolute top-32 left-[25%] rotate-[-7deg]",
+    },
+    {
+      title: "Amaan",
+      image: "/bacche/anaam.jpg",
+      className: "absolute top-16 left-[40%] rotate-[8deg]",
+    },
+    {
+      title: "Gurshan",
+      image: "/bacche/gurshan.jpg",
+      className: "absolute top-40 left-[55%] rotate-[10deg]",
+    },
+    {
+      title: "Maninder",
+      image: "/bacche/maninder.jpg",
+      className: "absolute top-24 left-[70%] rotate-[2deg]",
+    },
+    {
+      title: "Devkrit",
+      image: "/bacche/devkrit.jpg",
+      className: "absolute top-10 left-[5%] rotate-[-3deg]",
+    },
+    {
+      title: "Arihant",
+      image: "/bacche/arihant.jpg",
+      className: "absolute top-48 left-[20%] rotate-[6deg]",
+    },
+    {
+      title: "Person1",
+      image: "/bacche/her.jpg",
+      className: "absolute top-28 left-[35%] rotate-[-4deg]",
+    },
+    {
+      title: "Person2",
+      image: "/bacche/him.jpg",
+      className: "absolute top-52 left-[50%] rotate-[3deg]",
+    },
+    {
+      title: "Person 3",
+      image: "/bacche/karam1.jpg",
+      className: "absolute top-20 left-[65%] rotate-[-6deg]",
+    },
+    {
+      title: "Person 4",
+      image: "/bacche/karam2.jpg",
+      className: "absolute top-44 left-[75%] rotate-[5deg]",
+    },
+    {
+      title: "Person 5",
+      image: "/bacche/them.jpg",
+      className: "absolute top-60 left-[10%] rotate-[7deg]",
+    },
+    {
+      title: "Person 6",
+      image: "/bacche/they.jpg",
+      className: "absolute top-72 left-[30%] rotate-[-2deg]",
+    },
+    {
+      title: "Person 7",
+      image: "/bacche/yes.jpg",
+      className: "absolute top-64 left-[55%] rotate-[4deg]",
+    },
   ];
+
   return (
     <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
       <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
