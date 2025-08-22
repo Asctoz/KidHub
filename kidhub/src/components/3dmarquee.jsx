@@ -2,9 +2,9 @@
 
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation"; // 👈 import router
 
 export const ThreeDMarquee = ({ images, className }) => {
-  // Split the images array into 4 equal parts
   const chunkSize = Math.ceil(images.length / 4);
   const chunks = Array.from({ length: 4 }, (_, colIndex) => {
     const start = colIndex * chunkSize;
@@ -65,6 +65,16 @@ export const ThreeDMarquee = ({ images, className }) => {
       </div>
     </div>
   );
+};
+
+// ✅ random route opener
+const useOpenRandom = () => {
+  const router = useRouter();
+  return () => {
+    const projects = ["/decram"];
+    const randomPath = projects[Math.floor(Math.random() * projects.length)];
+    router.push(randomPath); // 👈 navigates
+  };
 };
 
 const GridLineHorizontal = ({ className, offset }) => {
@@ -156,6 +166,8 @@ export function ThreeDMarqueeDemoSecond() {
     "https://assets.aceternity.com/world-map.webp",
   ];
 
+  const openRandom = useOpenRandom(); // 👈 hook call
+
   return (
     <div className="relative w-screen h-screen min-h-screen flex flex-col items-center justify-center overflow-hidden rounded-none">
       <h2 className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl">
@@ -172,7 +184,10 @@ export function ThreeDMarqueeDemoSecond() {
         <button className="rounded-md bg-sky-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
           Explore Projects
         </button>
-        <button className="rounded-md border border-white/20 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/50 focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
+        <button
+          onClick={openRandom}
+          className="rounded-md border border-white/20 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/50 focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-black focus:outline-none"
+        >
           Open random project
         </button>
       </div>
