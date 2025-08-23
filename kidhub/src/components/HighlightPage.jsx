@@ -7,6 +7,8 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandInstagram,
+  IconBrandYoutubeFilled,
+  IconBrandFacebook
 } from "@tabler/icons-react";
 
 export default function HeroHighlightWithSocials() {
@@ -16,28 +18,35 @@ export default function HeroHighlightWithSocials() {
       icon: (
         <IconBrandTwitter className="h-6 w-6 text-neutral-200 group-hover:text-sky-400 transition-colors" />
       ),
-      href: "https://twitter.com",
+      href: "https://x.com/dismohali",
+    },
+    {
+      title: "Youtube",
+      icon: (
+        <IconBrandYoutubeFilled className="h-6 w-6 text-neutral-200 group-hover:text-sky-400 transition-colors" />
+      ),
+      href: "https://www.youtube.com/channel/UCZWJ9b0gNN4DcAtNxJVbz5A/",
     },
     {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-6 w-6 text-neutral-200 group-hover:text-sky-400 transition-colors" />
       ),
-      href: "https://github.com",
+      href: "https://github.com/dismh",
     },
     {
-      title: "LinkedIn",
+      title: "Facebook",
       icon: (
-        <IconBrandLinkedin className="h-6 w-6 text-neutral-200 group-hover:text-sky-400 transition-colors" />
+        <IconBrandFacebook className="h-6 w-6 text-neutral-200 group-hover:text-sky-400 transition-colors" />
       ),
-      href: "https://linkedin.com",
+      href: "https://facebook.com/dismohali",
     },
     {
       title: "Instagram",
       icon: (
         <IconBrandInstagram className="h-6 w-6 text-neutral-200 group-hover:text-sky-400 transition-colors" />
       ),
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/dismohali/",
     },
   ];
 

@@ -43,11 +43,11 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 justify-items-center">
                 <AnimatedPinCard
-                  title="Demo1"
-                  description="wasd"
+                  title="DeCram AI"
+                  description="An AI-powered platform tailored for students to upskill their academics."
                   link="\decram"
                   img="/assets/Decram.jpg"
-                  linkName="Children"
+                  linkName="View"
                 />
                 <AnimatedPinCard
                   title="DeCram AI"

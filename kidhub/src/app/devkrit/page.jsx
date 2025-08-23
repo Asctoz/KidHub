@@ -6,39 +6,62 @@ import { CodeBlock } from "@/components/CodeBlock";
 
 export default function Home() {
   const [tab, setTab] = useState("preview");
-  const [hideCode, sethideCode] = useState(true);
+  const [hideCode, sethideCode] = useState(false);
 
-  const iframeUrl = "https://decram.me";
-  const code = `const DummyComponent = () => {
-  const [count, setCount] = React.useState(0);
+  const iframeUrl = "https://dismh.github.io/code-spotlight-pages/maninder/maninder.html";
+  const code = `<!DOCTYPE html>
+<html>
+<head>
+  <title>My IT Club Partner/Friend</title>
+</head>
+<body bgcolor="green">
+  <marquee>
+    <h1><b>About Mehtab</b></h1>
+  </marquee>
 
-  const handleClick = () => {
-    setCount(prev => prev + 1);
-  };
+  <h2>
+    <i>
+      Mehtab studies in class 8B and loves to play cricket. 
+      He is good in Mapology and Geography.
+    </i>
+  </h2>
 
-  return (
-    <div className="p-4 border rounded-lg">
-      <h2 className="text-xl font-bold mb-4">Fights Counter</h2>
-      <p className="mb-2">Fight Club Fights Count: {count}</p>
-      <button
-        onClick={handleClick}
-        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-      >
-        Increment
-      </button>
-    </div>
-  );
-};`;
+  <h3>
+    He also likes watching other sports like football, etc. 
+    He is waiting for FIFA World Cup 2026.
+  </h3>
+
+  <h4>
+    He supports RCB and PBKS in IPL.
+  </h4>
+
+  <h5>
+    We both study in the same school.
+  </h5>
+
+  <h6>
+    He is also good in studies because he gets 85%. 
+    He is now aiming for 90% above.
+  </h6>
+
+  <img src="rcb.jpg" alt="RCB Image">
+  <img src="download.png" alt="Download Image">
+
+  <br><br>
+  <a href="old.html">Click here</a>
+</body>
+</html>
+`;
 
   return (
     <>
-      <Navbar />
+
       <main className="min-h-screen bg-black text-white px-4 py-5 flex flex-col items-center mt-20">
         <h1 className="text-4xl font-extrabold mt-5 mb-3 tracking-tight">
-          🎓 DeCram AI
+          🎓 School Days and Favourite Sports
         </h1>
         <p className="text-gray-400 mb-8 text-lg">
-         An innovation of Dexibility Productions.
+          A glimpse into the school days of students
         </p>
 
         <div className="w-full max-w-6xl border border-gray-800 rounded-xl overflow-hidden relative bg-[#0e0e0e] shadow-lg">
@@ -48,11 +71,10 @@ export default function Home() {
               <button
                 key={id}
                 onClick={() => setTab(id)}
-                className={`w-1/2 py-3 text-sm font-medium transition-colors ${
-                  tab === id
+                className={`w-1/2 py-3 text-sm font-medium transition-colors ${tab === id
                     ? "text-white border-b-2 border-sky-500 bg-[#1a1a1a]"
                     : "text-gray-400 hover:text-white hover:bg-[#1a1a1a]"
-                }`}
+                  }`}
               >
                 {id.charAt(0).toUpperCase() + id.slice(1)}
               </button>
@@ -135,7 +157,7 @@ export default function Home() {
           {/* Footer */}
           <div className="p-4 flex justify-between items-center bg-[#121212] border-t border-gray-800">
             <span className="text-sm text-gray-400">
-              by <strong className="text-white">Dexibility Productions</strong>
+              by <strong className="text-white">Devkrit, Ajeet and Maninder</strong>
             </span>
             <a
               href={iframeUrl}
