@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar.jsx";
 import HighlightPage from "@/components/HighlightPage.jsx";
-import Loader from "@/components/Loader.jsx";
+import Loader from "@/components/loader.jsx";
 import { AnimatedPinCard } from "@/components/3dPin";
 import { ColourfulText } from "@/components/ColourfulText.jsx";
 import { DraggableCardDemo } from "@/components/DraggableCards";
